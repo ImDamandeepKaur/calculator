@@ -29,7 +29,7 @@ pipeline {
         stage("Deploy"){
             steps {
                 echo "Deploying  the Container!"
-                //sh "docker run -d -it -p 8000:8000 daman888/calculator:latest"
+                //sh "docker run -d -it -p 8000:5000 daman888/calculator:latest"
                 sh "docker-compose down && docker-compose up -d"
             }
             
